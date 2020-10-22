@@ -16,5 +16,6 @@ putVsCodeSettings({
   "gitlens.currentLine.enabled": false,
   "screencastMode.onlyKeyboardShortcuts": true,
   "cSpell.enabled": false,
+  "editor.cursorBlinking": "solid",
 });
 doNotDisturb.enable();
