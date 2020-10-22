@@ -1,0 +1,17 @@
+{
+  "name": "scripts",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eunjae Lee <karis612@gmail.com> (https://github.com/eunjae-lee)",
+  "license": "MIT",
+  "devDependencies": {
+    "shelljs": "0.8.4"
+  },
+  "dependencies": {
+    "@sindresorhus/do-not-disturb": "^1.1.0"
+  }
+}
