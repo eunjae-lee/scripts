@@ -9,6 +9,7 @@
   "author": "Eunjae Lee <karis612@gmail.com> (https://github.com/eunjae-lee)",
   "license": "MIT",
   "devDependencies": {
+    "applescript": "^1.0.0",
     "shelljs": "0.8.4"
   },
   "dependencies": {
