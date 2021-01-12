@@ -16,6 +16,8 @@ if (url.startsWith("https://github.com/") && url.includes("/pull/")) {
   if (exec(`cd ~/workspace/${repo} && git status --porcelain`).code !== 0) {
     showNotification("The working directory is not clean.");
   } else {
-    exec(`cd ~/workspace/${repo} && code . && hub pr checkout ${number}`);
+    exec(
+      `cd ~/workspace/${repo} && /usr/local/bin/code . && /usr/local/bin/hub pr checkout ${number}`
+    );
   }
 }
