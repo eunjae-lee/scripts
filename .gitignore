@@ -1,1 +1,3 @@
 node_modules
+contextual/time-based/*
+contextual/clipboard-based/*
