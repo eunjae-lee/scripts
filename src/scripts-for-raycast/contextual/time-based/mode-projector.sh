@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# @raycast.title Mode: Living room
+# @raycast.title Mode: Projector
 #
 # @raycast.mode silent
 # @raycast.icon 💻
 # @raycast.schemaVersion 1
 
-open "kmtrigger://macro=Mode%3A%20Living%20room"
+open "kmtrigger://macro=Mode%3A%20Projector"
