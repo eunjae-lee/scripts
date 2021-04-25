@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# @raycast.title Mode: Living room
+# @raycast.title z_ Mode: Living room
 #
 # @raycast.mode silent
 # @raycast.icon 💻

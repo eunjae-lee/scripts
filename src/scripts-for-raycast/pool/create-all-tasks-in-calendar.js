@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// @raycast.title Create all tasks in Calendar
+// @raycast.title z_ Create all tasks in Calendar
 //
 // @raycast.mode compact
 // @raycast.icon 🗓

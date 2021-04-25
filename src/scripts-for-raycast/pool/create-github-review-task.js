@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// @raycast.title Create review task for GitHub Pull-request
+// @raycast.title z_ Create review task for GitHub Pull-request
 //
 // @raycast.mode compact
 // @raycast.icon 👀
