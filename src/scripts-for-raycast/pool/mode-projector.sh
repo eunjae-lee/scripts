@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# @raycast.title z_ Mode: Projector
+# @raycast.title z Mode: Projector
 #
 # @raycast.mode silent
 # @raycast.icon 💻

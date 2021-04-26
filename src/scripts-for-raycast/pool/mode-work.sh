@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# @raycast.title z_ Mode: Work
+# @raycast.title z Mode: Work
 #
 # @raycast.mode silent
 # @raycast.icon 💻
