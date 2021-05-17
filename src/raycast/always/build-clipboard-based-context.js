@@ -14,4 +14,7 @@ const {
 clearContextualCommands("clipboard-based");
 
 const clipboard = readClipboard();
-// addContextualCommand("clipboard-based", "mode-work.sh");
+
+if (clipboard.includes("github.com") && clipboard.includes("/pull/")) {
+  addContextualCommand("clipboard-based", "create-github-review-task.js");
+}

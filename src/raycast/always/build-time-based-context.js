@@ -29,7 +29,6 @@ clearContextualCommands("time-based");
 
 addCommands({
   "create-all-tasks-in-calendar.js": isWorkingHour && isWeekDay && isMorning,
-  "create-github-review-task.js": isWorkingHour && isWeekDay,
   "mode-living-room.sh": isBreakfastTime || isLunchTime || isDinerTime,
   "mode-projector.sh": 22 <= now.getHours(),
   "mode-work.sh": isWorkingHour,
