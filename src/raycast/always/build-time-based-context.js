@@ -11,7 +11,7 @@ const now = new Date();
 const isWeekend = now.getDay() === 0 || now.getDay() === 6;
 const isWeekDay = !isWeekend;
 
-const isWorkingHour = 9 <= now.getHours() && now.getHours() <= 18;
+const isWorkingHour = 9 <= now.getHours() && now.getHours() < 18;
 const isBreakfastTime = now.getHours() <= 10;
 const isLunchTime = 11 <= now.getHours() && now.getHours() < 14;
 const isDinerTime = 18 <= now.getHours() && now.getHours() < 20;

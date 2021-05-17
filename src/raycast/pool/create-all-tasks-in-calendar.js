@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-// @raycast.title z Create all tasks in Calendar
+// @raycast.title ! Create all tasks in Calendar
 //
 // @raycast.mode compact
 // @raycast.icon 🗓
 // @raycast.schemaVersion 1
 
-const { runShellScript, runAppleScript } = require("../../lib");
+const { runShellScript, runAppleScript } = require("../../../lib");
 
 const shellScript = `
 sqlite3 ~/Library/Group\\ Containers/JLMPQHK86H.com.culturedcode.ThingsMac/Things\\ Database.thingsdatabase/main.sqlite " \\

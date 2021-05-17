@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 
-// @raycast.title z Create review task for GitHub Pull-request
+// @raycast.title ! Create review task for GitHub Pull-request
 //
 // @raycast.mode compact
 // @raycast.icon 👀
 // @raycast.schemaVersion 1
 
-const { readClipboard, runShellScript, runAppleScript } = require("../../lib");
+const {
+  readClipboard,
+  runShellScript,
+  runAppleScript,
+} = require("../../../lib");
 const url = readClipboard();
 
 if (!url || !url.startsWith("https://github.com/") || !url.includes("/pull/")) {
-  console.error("No url of pull-request found from clipboard.");
+  console.error("No pull-request found from clipboard.");
   process.exit(0);
 }
 
@@ -53,4 +57,4 @@ const appleScript = `
 `;
 runAppleScript(appleScript);
 
-console.log("Added " + taskTitle);
+console.log("👍 Added");

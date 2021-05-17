@@ -41,21 +41,14 @@ const getFrontMostApp = async () => {
 
 const addContextualCommand = (context, filename) => {
   fs.copyFileSync(
-    path.join(__dirname, "..", "scripts-for-raycast", "pool", filename),
-    path.join(
-      __dirname,
-      "..",
-      "scripts-for-raycast",
-      "contextual",
-      context,
-      filename
-    )
+    path.join(__dirname, "..", "raycast", "pool", filename),
+    path.join(__dirname, "..", "raycast", `context-${context}`, filename)
   );
 };
 
 const clearContextualCommands = (context) => {
-  exec(`rm ${context}/*`, {
-    cwd: path.join(__dirname, "..", "scripts-for-raycast", "contextual"),
+  exec(`rm -f *.{js,sh}`, {
+    cwd: path.join(__dirname, "..", "raycast", `context-${context}`),
   });
 };
 
