@@ -1,4 +1,4 @@
 node_modules
-contextual/time-based/*
-contextual/clipboard-based/*
+src/raycast/context-clipboard-based/*
+src/raycast/context-time-based/*
 .DS_Store
