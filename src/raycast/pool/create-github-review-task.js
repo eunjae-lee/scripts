@@ -6,11 +6,7 @@
 // @raycast.icon 👀
 // @raycast.schemaVersion 1
 
-const {
-  readClipboard,
-  runShellScript,
-  runAppleScript,
-} = require("../../../lib");
+const { readClipboard, runShellScript, runAppleScript } = require("../../lib");
 const url = readClipboard();
 
 if (!url || !url.startsWith("https://github.com/") || !url.includes("/pull/")) {

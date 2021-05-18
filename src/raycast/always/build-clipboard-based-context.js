@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 // @raycast.title Build Clipboard-based Context
-// @raycast.refreshTime 100000000000s
 // @raycast.mode inline
 // @raycast.schemaVersion 1
 
@@ -17,4 +16,5 @@ const clipboard = readClipboard();
 
 if (clipboard.includes("github.com") && clipboard.includes("/pull/")) {
   addContextualCommand("clipboard-based", "create-github-review-task.js");
+  addContextualCommand("clipboard-based", "checkout-pull-request.js");
 }

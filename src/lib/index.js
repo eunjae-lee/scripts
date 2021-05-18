@@ -52,6 +52,11 @@ const clearContextualCommands = (context) => {
   });
 };
 
+const config = {
+  homedir: "/Users/eunjaelee",
+  workspace: "/Users/eunjaelee/workspace",
+};
+
 module.exports = {
   readClipboard,
   runShellScript,
@@ -59,4 +64,5 @@ module.exports = {
   getFrontMostApp,
   addContextualCommand,
   clearContextualCommands,
+  config,
 };
