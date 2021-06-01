@@ -11,9 +11,12 @@
   "devDependencies": {
     "applescript": "^1.0.0",
     "clipboardy": "2.3.0",
+    "node-fetch": "2.6.1",
     "shelljs": "0.8.4"
   },
   "dependencies": {
-    "@sindresorhus/do-not-disturb": "^1.1.0"
+    "@sindresorhus/do-not-disturb": "^1.1.0",
+    "dotenv": "^10.0.0",
+    "open": "^8.2.0"
   }
 }

@@ -63,3 +63,5 @@ tasks.forEach((task) => {
 });
 
 console.log("Created " + tasks.length + " events");
+
+runShellScript("open /System/Applications/Calendar.app");

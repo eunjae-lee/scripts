@@ -2,12 +2,17 @@
 
 // @raycast.title Test
 //
-// @raycast.mode fullOutput
+// @raycast.mode inline
+// @raycast.refreshTime 1d
 // @raycast.schemaVersion 1
 
-const { getFrontMostApp } = require("../../lib");
+// const { getFrontMostApp, setContextualCommands } = require("../../lib");
 
-(async function () {
-  const { appName } = await getFrontMostApp();
-  console.log(appName);
-})();
+// (async function () {
+//   const { appName } = await getFrontMostApp();
+//   console.log(appName);
+// })();
+
+// setContextualCommands("time-based");
+
+console.log("TEST");

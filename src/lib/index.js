@@ -3,11 +3,21 @@ const clipboardy = require("clipboardy");
 const applescript = require("applescript");
 const fs = require("fs");
 const path = require("path");
+const dotenv = require("dotenv");
+const fetch = require("node-fetch");
+dotenv.config({ path: path.join(__dirname, "..", "..", ".env") });
 
 const readClipboard = () => clipboardy.readSync();
 
-const runShellScript = (script, opts = {}) =>
-  exec(script, { silent: true, ...opts });
+const writeToClipboard = (text) => clipboardy.writeSync(text);
+
+const runShellScript = (script, opts = { printError: true }) => {
+  const result = exec(script, { silent: true, ...opts });
+  if (opts.printError) {
+    console.log(result.stderr);
+  }
+  return result;
+};
 
 const runAppleScript = (script) =>
   new Promise((resolve, reject) => {
@@ -52,17 +62,57 @@ const clearContextualCommands = (context) => {
   });
 };
 
+const setContextualCommands = (context, filenamesToSet) => {
+  const dir = path.join(__dirname, "..", "raycast", `context-${context}`);
+  const alreadyExistingFiles = fs
+    .readdirSync(dir)
+    .filter((filename) => filename !== ".gitkeep");
+  const filesToRemove = alreadyExistingFiles.filter(
+    (filename) => !filenamesToSet.includes(filename)
+  );
+  const filesToAdd = filenamesToSet.filter(
+    (filename) => !alreadyExistingFiles.includes(filename)
+  );
+
+  filesToAdd.forEach((filename) => addContextualCommand(context, filename));
+  filesToRemove.forEach((filename) => fs.unlinkSync(path.join(dir, filename)));
+};
+
+const slack = ({
+  text,
+  channel = "#general",
+  username = "bot",
+  iconEmoji = ":ghost:",
+}) => {
+  fetch(process.env.SLACK_INCOMING_HOOK, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      channel,
+      username,
+      text,
+      icon_emoji: iconEmoji,
+    }),
+  });
+};
+
 const config = {
   homedir: "/Users/eunjaelee",
   workspace: "/Users/eunjaelee/workspace",
+  sandbox: "/Users/eunjaelee/sandbox",
 };
 
 module.exports = {
   readClipboard,
+  writeToClipboard,
   runShellScript,
   runAppleScript,
   getFrontMostApp,
   addContextualCommand,
   clearContextualCommands,
+  setContextualCommands,
   config,
+  slack,
 };

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-// @raycast.title ! Check out pull request
+// @raycast.title ! Open the pull request in VSCode
 //
-// @raycast.mode fullOutput
+// @raycast.mode compact
 // @raycast.icon 💻
 // @raycast.schemaVersion 1
 
@@ -22,7 +22,6 @@ if (!fs.existsSync(`${workspace}/${repo}`)) {
   console.log("Cloning the repository");
   const sshUrl = `git@github.com:${org} /${repo}.git`;
   runShellScript(`cd ${workspace} && git clone ${sshUrl}`);
-  // git@github.com:algolia/create-instantsearch-app.git
 }
 
 const isCleanWorkingDirectory =
@@ -34,11 +33,9 @@ const isCleanWorkingDirectory =
 
 if (isCleanWorkingDirectory) {
   console.log("Checking out the pull request");
-  console.log(
-    runShellScript(`cd ${workspace}/${repo} && hub pr checkout ${prNumber}`, {
-      silent: false,
-    }).stderr
-  );
+  runShellScript(`cd ${workspace}/${repo} && hub pr checkout ${prNumber}`, {
+    silent: false,
+  });
 } else {
   console.log(
     "❗️ The working directory is not clean, so couldn't check out the branch."

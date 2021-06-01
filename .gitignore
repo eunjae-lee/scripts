@@ -2,3 +2,5 @@ node_modules
 src/raycast/context-clipboard-based/*
 src/raycast/context-time-based/*
 .DS_Store
+tmp
+.env
