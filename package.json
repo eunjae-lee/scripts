@@ -12,6 +12,7 @@
     "applescript": "^1.0.0",
     "clipboardy": "2.3.0",
     "node-fetch": "2.6.1",
+    "puppeteer": "^10.1.0",
     "shelljs": "0.8.4"
   },
   "dependencies": {

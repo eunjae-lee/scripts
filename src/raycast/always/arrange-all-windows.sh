@@ -7,4 +7,4 @@
 # @raycast.packageName GitHub
 # @raycast.schemaVersion 1
 
-open "btt://execute_assigned_actions_for_trigger/?uuid=B02AFA35-A332-4F6D-880E-042F28A93A65"
+open "kmtrigger://macro=8271D08B-DC75-48F4-99F2-2B9F0EE8238B"
